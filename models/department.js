@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 
 // Define the schema for the department collection
 const departmentSchema = new mongoose.Schema({
-    name: String,   // You can add more attributes here
+    name:{type:String}, 
+    employees:{type:Number,default:0}
 });
 
 // Create the Department model
