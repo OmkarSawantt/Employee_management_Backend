@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 
 // Define the schema for the employee collection
 const employeeSchema = new mongoose.Schema({
-    firstName: String,   // Add more attributes if needed
-    lastName: String,
-    department: String,
+    firstName: {type:String},   
+    lastName:{type:String},
+    department:{ type: mongoose.Schema.Types.ObjectId, ref: 'Department' },
 });
 
 // Create the Employee model
