@@ -26,6 +26,9 @@ db.once('open', () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    res.redirect('/api-docs');
+});
 // Use Swagger UI
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
