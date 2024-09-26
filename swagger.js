@@ -12,7 +12,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: 'http://localhost:4000', // Replace with your app’s base URL
+      url: 'https://employee-management-backend-kwaj.onrender.com', // Replace with your app’s base URL
     },
   ],
 };
