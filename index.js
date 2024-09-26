@@ -5,7 +5,12 @@ const Department = require('./models/department');
 const { swaggerUi, swaggerSpec } = require('./swagger'); // Import Swagger
 var cors = require('cors')
 const app = express();
-app.use(cors())
+const corsOptions = {
+  origin: 'https://employee-management-backend-kwaj.onrender.com', // Replace with your domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
+  credentials: true, // Allow credentials (like cookies) to be sent
+};
+app.use(cors(corsOptions))
 const dotenv = require('dotenv');
 dotenv.config();
 
